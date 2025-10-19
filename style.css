@@ -52,18 +52,18 @@ html {
 .skills span {
   display: inline-block;
   background: #f0f0f0;
-  margin: 5px;
+  margin: 4px;
   padding: 8px 12px;
-  border-radius: 8px;
+  border-radius: 6px;
   transition: all 0.3s ease;
-  cursor: pointer;
+  cursor: default;
 }
-
 .skills span:hover {
   background: #0077b5;
-  color: white;
-  transform: scale(1.1);
+  color: #fff;
+  transform: scale(1.05);
 }
+
 
 section {
   opacity: 0;
@@ -81,4 +81,19 @@ section:nth-child(5) { animation-delay: 0.8s; }
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+
+header nav a {
+  margin: 0 8px;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s;
+}
+header nav a:hover {
+  color: #0077b5;
+}
+
+html {
+  scroll-behavior: smooth;
 }
