@@ -85,15 +85,9 @@ section:nth-child(5) { animation-delay: 0.8s; }
 
 
 header nav a {
-  margin: 0 8px;
-  text-decoration: none;
-  color: #333;
-  transition: color 0.2s;
+  color: #fff;
 }
 header nav a:hover {
-  color: #0077b5;
+  color: #ffcc00; /* or any highlight */
 }
 
-html {
-  scroll-behavior: smooth;
-}
