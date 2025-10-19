@@ -33,3 +33,52 @@ footer {
   padding: 1.5rem;
   background: #dcdde1;
 }
+
+footer a {
+  text-decoration: none;
+  color: #0077b5; /* LinkedIn blue */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+footer a:hover {
+  color: #ff6600; /* highlight color */
+  transform: scale(1.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.skills span {
+  display: inline-block;
+  background: #f0f0f0;
+  margin: 5px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skills span:hover {
+  background: #0077b5;
+  color: white;
+  transform: scale(1.1);
+}
+
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+}
+
+section:nth-child(2) { animation-delay: 0.2s; }
+section:nth-child(3) { animation-delay: 0.4s; }
+section:nth-child(4) { animation-delay: 0.6s; }
+section:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
