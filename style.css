@@ -1,23 +1,66 @@
+/* Import professional fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Global reset */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   background-color: #f5f6fa;
   color: #2f3640;
   line-height: 1.6;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------------- HEADER ---------------- */
 header {
+  background: #0f172a; /* elegant dark navy */
+  color: #f8fafc; /* near white */
   text-align: center;
-  background: #273c75;
-  color: white;
-  padding: 2rem 0;
+  padding: 50px 20px;
 }
 
-h1 {
-  margin: 0;
-  font-size: 2.2em;
+header h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #cbd5e1; /* soft gray */
 }
 
+header p {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #cbd5e1;
+  margin-bottom: 25px;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px; /* spacing between links */
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+header nav a {
+  color: #f8fafc;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+header nav a:hover {
+  color: #38bdf8; /* cyan on hover */
+  transform: translateY(-2px);
+}
+
+/* ---------------- SECTIONS ---------------- */
 section {
   width: 80%;
   max-width: 800px;
@@ -26,46 +69,7 @@ section {
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
 
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  background: #dcdde1;
-}
-
-footer a {
-  text-decoration: none;
-  color: #0077b5; /* LinkedIn blue */
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-footer a:hover {
-  color: #ff6600; /* highlight color */
-  transform: scale(1.1);
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-.skills span {
-  display: inline-block;
-  background: #f0f0f0;
-  margin: 4px;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  cursor: default;
-}
-.skills span:hover {
-  background: #0077b5;
-  color: #fff;
-  transform: scale(1.05);
-}
-
-
-section {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeIn 1s forwards;
@@ -83,14 +87,7 @@ section:nth-child(5) { animation-delay: 0.8s; }
   }
 }
 
-
-header nav a {
-  color: #fff;
-}
-header nav a:hover {
-  color: #ffcc00; /* or any highlight */
-}
-
+/* ---------------- ABOUT ---------------- */
 .about-container {
   display: flex;
   align-items: center;
@@ -98,13 +95,14 @@ header nav a:hover {
 }
 
 .profile-pic {
-  width: 150px;   /* adjust size */
-  height: 150px;  /* adjust size */
-  border-radius: 50%; /* makes it circular */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* circular image */
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+/* ---------------- TECH ICONS ---------------- */
 .tech-icons {
   margin-top: 8px;
   display: flex;
@@ -128,68 +126,35 @@ header nav a:hover {
   transform: translateY(-3px);
 }
 
-/* Import professional fonts */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap');
-
-header {
-  background: #0f172a; /* elegant dark navy */
-  color: #f8fafc; /* near white */
-  text-align: center;
-  padding: 50px 20px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-header h1 {
-  font-family: 'Merriweather', serif;
-  font-size: 3em;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: #cbd5e1; /* softer gray */
-}
-
-header p {
-  font-size: 1.1em;
-  font-weight: 400;
-  color: #cbd5e1; /* softer gray */
-  margin-bottom: 25px;
-}
-
-header nav {
-  display: flex;
-  justify-content: center;   /* center items */
-  align-items: center;       /* vertical alignment */
-  gap: 25px;                 /* spacing between links */
-  flex-wrap: wrap;           /* allows wrapping on smaller screens */
-  margin-top: 15px;
-}
-
-header nav a {
-  color: #f8fafc;
+/* ---------------- LINKS (GENERAL CONTENT) ---------------- */
+section a {
+  color: #0ea5e9; /* cyan */
   text-decoration: none;
   font-weight: 600;
-  font-size: 1em;
-  font-family: 'Open Sans', sans-serif;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+section a:hover {
+  color: #38bdf8; /* lighter cyan */
+  border-bottom: 2px solid #38bdf8; /* underline animation */
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #dcdde1;
+}
+
+footer a {
+  text-decoration: none;
+  color: #0077b5; /* LinkedIn blue */
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
-header nav a:hover {
-  color: #cbd5e1; /* softer gray */
-  transform: translateY(-2px);
-}
-
-
-/* General link style */
-a {
-  color: #0ea5e9; /* professional cyan */
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
-  border-bottom: 2px solid transparent;
-  padding-bottom: 2px;
-}
-
-/* Hover effect */
-a:hover {
-  color: #38bdf8; /* lighter cyan */
-  border-bottom: 2px solid #38bdf8; /* animated underline */
+footer a:hover {
+  color: #ff6600; /* highlight color */
+  transform: scale(1.1);
 }
