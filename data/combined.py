@@ -4,9 +4,10 @@ import pandas as pd
 def load_and_preprocess(file_name, is_price_data=False):
     """Load and sort dataset by date."""
     try:
-        # df = pd.read_csv(file_name)
-        file_name = file_name.replace(" ", "%")
-        url = f"https://raw.githubusercontent.com/ahnb24/AmirhessamNakhaei.github.io/main/data/{file_name}.csv"
+        
+        file_name = file_name.replace(" ", "%20")
+        print(f"Loading {file_name}...")
+        url = f"https://raw.githubusercontent.com/ahnb24/AmirhessamNakhaei.github.io/main/data/{file_name}"
         df = pd.read_csv(url)
         if is_price_data:  # Only preprocess the price data for GBP-IRR ratio
             df['GBP-IRR ratio'] = df['GBP-IRR ratio'].str.replace(',', '').astype(float)
