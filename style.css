@@ -176,19 +176,3 @@ footer a:hover {
   transform: scale(1.05);
 }
 
-/* Back to Main Page button */
-.back-home-btn {
-  display: inline-block;
-  background: #06b6d4;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 25px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.back-home-btn:hover {
-  background: #0ea5e9;
-  transform: scale(1.05);
-}
