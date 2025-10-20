@@ -128,3 +128,55 @@ header nav a:hover {
   transform: translateY(-3px);
 }
 
+/* Import a clean, professional Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+header {
+  background: #1e2a47; /* deep navy */
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+header h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #d1d5db; /* light gray */
+  margin-bottom: 20px;
+}
+
+header nav a {
+  color: #f3f4f6;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+header nav a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #06b6d4; /* cyan accent */
+  transition: width 0.3s;
+  margin: auto;
+}
+
+header nav a:hover {
+  color: #06b6d4;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+
