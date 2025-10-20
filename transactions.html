@@ -63,25 +63,36 @@
   <iframe src="https://trinket.io/embed/python3/6a1e2dea751b?runOption=run" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
   </section>
 
+<!-- Back to Main Page Button -->
+<div class="back-btn-container">
+  <a href="index.html" class="back-home-btn">
+    <i class="fas fa-home"></i> Back to Main Page
+  </a>
+</div>
 
-<script>
-  const backToTopBtn = document.getElementById("backToTop");
+<!-- Back to Top Button -->
+  <div class="back-btn-container">
+    <button id="backToTop"><i class="fas fa-arrow-up"></i> Back to Top</button>
+  </div>
 
-  // Show button when scrolling down
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-      backToTopBtn.style.display = "block";
-    } else {
-      backToTopBtn.style.display = "none";
-    }
-  });
+  <footer>
+    <p>
+      📧 <a href="mailto:3163428N@student.gla.ac.uk">Academic Email</a> |
+      📧 <a href="mailto:ahnb24@gmail.com">Gmail</a> |
+      <a href="https://www.linkedin.com/in/amirhessam-nakhaei-125058225" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a> |
+      <a href="https://github.com/ahnb24" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </p>
+  </footer>
 
-  // Smooth scroll to top on click
-  backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-</script>
-
-<button id="backToTop">↑ Top</button>
+  <script>
+    const backToTopBtn = document.getElementById("backToTop");
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
