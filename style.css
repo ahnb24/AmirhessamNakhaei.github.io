@@ -36,28 +36,6 @@ header p {
   margin-bottom: 25px;
 }
 
-header nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  flex-wrap: wrap;
-  margin-top: 15px;
-}
-
-header nav a {
-  color: #f8fafc;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1em;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-header nav a:hover {
-  color: #38bdf8;
-  transform: translateY(-2px);
-}
-
 /* SECTIONS */
 section {
   width: 80%;
@@ -75,49 +53,9 @@ section {
 section:nth-child(2) { animation-delay: 0.2s; }
 section:nth-child(3) { animation-delay: 0.4s; }
 section:nth-child(4) { animation-delay: 0.6s; }
-section:nth-child(5) { animation-delay: 0.8s; }
 
 @keyframes fadeIn {
   to { opacity: 1; transform: translateY(0); }
-}
-
-/* ABOUT */
-.about-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* TECH ICONS */
-.tech-icons {
-  margin-top: 8px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.tech-icons div {
-  background: #f4f4f5;
-  padding: 8px 14px;
-  border-radius: 12px;
-  font-size: 0.9em;
-  font-weight: 500;
-  transition: background 0.3s, transform 0.2s;
-  cursor: pointer;
-}
-
-.tech-icons div:hover {
-  background: #06b6d4;
-  color: white;
-  transform: translateY(-3px);
 }
 
 /* LINKS in content */
@@ -153,42 +91,31 @@ footer a:hover {
   transform: scale(1.1);
 }
 
-/* BACK TO TOP (inline button) */
+/* BUTTONS (Back to Top + Back to Main) */
 .back-btn-container {
   text-align: center;
   margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-#backToTop {
-  background: #06b6d4;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  padding: 12px 24px;
-  font-size: 1em;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-}
-
-#backToTop:hover {
-  background: #0ea5e9;
-  transform: scale(1.05);
-}
-
-/* Back to Main Page button */
-.back-home-btn {
+.button-modern {
   display: inline-block;
   background: #06b6d4;
   color: white;
   padding: 12px 24px;
   border-radius: 25px;
   font-weight: 600;
+  font-size: 1em;
   text-decoration: none;
+  border: none;
+  cursor: pointer;
   transition: background 0.3s, transform 0.2s;
 }
 
-.back-home-btn:hover {
+.button-modern:hover {
   background: #0ea5e9;
   transform: scale(1.05);
 }
