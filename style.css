@@ -144,7 +144,7 @@ header h1 {
   font-size: 3em;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #38bdf8; /* cyan highlight */
+  color: #cbd5e1; /* softer gray */
 }
 
 header p {
@@ -173,8 +173,23 @@ header nav a {
 }
 
 header nav a:hover {
-  color: #38bdf8; /* cyan on hover */
+  color: #cbd5e1; /* softer gray */
   transform: translateY(-2px);
 }
 
 
+/* General link style */
+a {
+  color: #0ea5e9; /* professional cyan */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+/* Hover effect */
+a:hover {
+  color: #38bdf8; /* lighter cyan */
+  border-bottom: 2px solid #38bdf8; /* animated underline */
+}
