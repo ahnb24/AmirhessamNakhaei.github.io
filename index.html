@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amirhessam Nakhaei</title>
-  <link rel="stylesheet" href="style.css"> <!-- ✅ your CSS file -->
+  <link rel="stylesheet" href="style.css"> <!-- ✅ CSS file -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- icons -->
 </head>
 
@@ -197,6 +197,11 @@
     </ul>
   </section>
 
+  <!-- Back to Top Button -->
+  <div class="back-btn-container">
+    <button id="backToTop"><i class="fas fa-arrow-up"></i> Back to Top</button>
+  </div>
+
   <footer>
     <p>
       📧 <a href="mailto:3163428N@student.gla.ac.uk">Academic Email</a> |
@@ -210,20 +215,8 @@
     </p>
   </footer>
 
-  <!-- Back to Top Button -->
-  <button id="backToTop">↑</button>
-
   <script>
     const backToTopBtn = document.getElementById("backToTop");
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 200) {
-        backToTopBtn.style.display = "block";
-      } else {
-        backToTopBtn.style.display = "none";
-      }
-    });
-
     backToTopBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
