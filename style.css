@@ -91,3 +91,40 @@ header nav a:hover {
   color: #ffcc00; /* or any highlight */
 }
 
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-pic {
+  width: 150px;   /* adjust size */
+  height: 150px;  /* adjust size */
+  border-radius: 50%; /* makes it circular */
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.tech-icons {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tech-icons div {
+  background: #f4f4f5;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.tech-icons div:hover {
+  background: #06b6d4;
+  color: white;
+  transform: translateY(-3px);
+}
+
