@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Transaction Data</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- PyScript -->
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 </head>
 <body>
   <header>
@@ -18,13 +22,13 @@
 
     <ul>
       <li>
-        <a href="data/Transaction Summaries in Iranian Rial(IRR).pdf" download>
+        <a href="data/Transaction Summary in Iranian Rial(IRR).pdf" download>
           Transaction Summaries in IRR (PDF)
         </a><br>
         <small>Official transaction summaries shown in Iranian Rial (IRR).</small>
       </li>
       <li>
-        <a href="data/Transaction Summaries(GBP).png" download>
+        <a href="data/Transaction Summary (GBP).png" download>
           Transaction Summaries in GBP (PNG)
         </a><br>
         <small>Summaries converted into GBP for clarity.</small>
@@ -42,10 +46,50 @@
         <small>Exchange rate history of GBP/IRR for all relevant dates.</small>
       </li>
       <li>
-        <strong>Transaction CSV Files</strong><br>
+        <a href="data/Transactions.zip" download>
+          Transactions.zip
+        </a><br>
         <small>Each <code>name.csv</code> file contains transactions at specific dates.</small>
       </li>
     </ul>
+  </section>
+
+  <section>
+    <h2>Run Python Code</h2>
+    <p>You can execute a simplified demo of <code>combined.py</code> directly in your browser:</p>
+
+    <!-- Interactive Python console -->
+    <py-repl auto-generate="true"></py-repl>
+
+    <!-- Example demo script -->
+    <py-script>
+import pandas as pd
+
+# Example simulated data
+transactions = pd.DataFrame({
+    "Date": ["2024-01-01", "2024-01-02", "2024-01-03"],
+    "Value_GBP": [1000, 1200, 900]
+})
+
+print("=== Demo Transactions ===")
+print(transactions)
+
+# Example exchange rates
+rates = pd.DataFrame({
+    "Date": ["2024-01-01", "2024-01-02", "2024-01-03"],
+    "GBP_IRR": [53000, 53200, 53100]
+})
+
+print("\n=== Exchange Rates ===")
+print(rates)
+
+# Merge & calculate values in IRR
+merged = pd.merge(transactions, rates, on="Date")
+merged["Value_IRR"] = merged["Value_GBP"] * merged["GBP_IRR"]
+
+print("\n=== Transactions in IRR ===")
+print(merged)
+    </py-script>
   </section>
 
   <footer>
