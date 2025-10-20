@@ -1,7 +1,6 @@
-/* Import professional fonts */
+/* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap');
 
-/* Global reset */
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
@@ -14,10 +13,10 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ---------------- HEADER ---------------- */
+/* HEADER */
 header {
-  background: #0f172a; /* elegant dark navy */
-  color: #f8fafc; /* near white */
+  background: #0f172a;
+  color: #f8fafc;
   text-align: center;
   padding: 50px 20px;
 }
@@ -27,7 +26,7 @@ header h1 {
   font-size: 3em;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #cbd5e1; /* soft gray */
+  color: #cbd5e1;
 }
 
 header p {
@@ -41,7 +40,7 @@ header nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px; /* spacing between links */
+  gap: 25px;
   flex-wrap: wrap;
   margin-top: 15px;
 }
@@ -51,16 +50,15 @@ header nav a {
   text-decoration: none;
   font-weight: 600;
   font-size: 1em;
-  font-family: 'Open Sans', sans-serif;
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
 header nav a:hover {
-  color: #38bdf8; /* cyan on hover */
+  color: #38bdf8;
   transform: translateY(-2px);
 }
 
-/* ---------------- SECTIONS ---------------- */
+/* SECTIONS */
 section {
   width: 80%;
   max-width: 800px;
@@ -69,7 +67,6 @@ section {
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-
   opacity: 0;
   transform: translateY(20px);
   animation: fadeIn 1s forwards;
@@ -81,13 +78,10 @@ section:nth-child(4) { animation-delay: 0.6s; }
 section:nth-child(5) { animation-delay: 0.8s; }
 
 @keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* ---------------- ABOUT ---------------- */
+/* ABOUT */
 .about-container {
   display: flex;
   align-items: center;
@@ -97,12 +91,12 @@ section:nth-child(5) { animation-delay: 0.8s; }
 .profile-pic {
   width: 150px;
   height: 150px;
-  border-radius: 50%; /* circular image */
+  border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* ---------------- TECH ICONS ---------------- */
+/* TECH ICONS */
 .tech-icons {
   margin-top: 8px;
   display: flex;
@@ -126,9 +120,9 @@ section:nth-child(5) { animation-delay: 0.8s; }
   transform: translateY(-3px);
 }
 
-/* ---------------- LINKS (GENERAL CONTENT) ---------------- */
+/* LINKS in content */
 section a {
-  color: #0ea5e9; /* cyan */
+  color: #0ea5e9;
   text-decoration: none;
   font-weight: 600;
   border-bottom: 2px solid transparent;
@@ -137,11 +131,11 @@ section a {
 }
 
 section a:hover {
-  color: #38bdf8; /* lighter cyan */
-  border-bottom: 2px solid #38bdf8; /* underline animation */
+  color: #38bdf8;
+  border-bottom: 2px solid #38bdf8;
 }
 
-/* ---------------- FOOTER ---------------- */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 1.5rem;
@@ -150,35 +144,35 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: #0077b5; /* LinkedIn blue */
+  color: #0077b5;
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
 footer a:hover {
-  color: #ff6600; /* highlight color */
+  color: #ff6600;
   transform: scale(1.1);
 }
 
-/* Back to Top Button */
+/* BACK TO TOP BUTTON */
 #backToTop {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: #06b6d4; /* cyan */
+  background: #06b6d4;
   color: white;
   border: none;
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  font-size: 1.2em;
+  font-size: 1.4em;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  display: none; /* hidden by default */
+  display: none;
   transition: background 0.3s, transform 0.2s;
   z-index: 1000;
 }
 
 #backToTop:hover {
-  background: #0ea5e9; /* lighter cyan */
+  background: #0ea5e9;
   transform: scale(1.1);
 }
