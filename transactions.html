@@ -9,6 +9,11 @@
   <!-- PyScript -->
   <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
   <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+  <!-- Configure Python environment -->
+  <py-config>
+    packages = ["pandas"]
+  </py-config>
 </head>
 <body>
   <header>
@@ -55,14 +60,14 @@
   </section>
 
   <section>
-  <h2>Run Python Code</h2>
-  <p>You can execute a simplified demo of <code>combined.py</code> directly in your browser:</p>
+    <h2>Run Python Code</h2>
+    <p>You can execute a simplified demo of <code>combined.py</code> directly in your browser:</p>
 
-  <!-- Interactive Python REPL (console) -->
-  <py-repl auto-generate="true"></py-repl>
+    <!-- Interactive Python REPL (console) -->
+    <py-repl auto-generate="true"></py-repl>
 
-  <!-- Demo script executed on page load -->
-  <py-script>
+    <!-- Demo script executed on page load -->
+    <py-script>
 import pandas as pd
 
 # Example simulated data
@@ -89,9 +94,8 @@ merged["Value_IRR"] = merged["Value_GBP"] * merged["GBP_IRR"]
 
 print("\n=== Transactions in IRR ===")
 print(merged)
-  </py-script>
+    </py-script>
   </section>
-
 
   <footer>
     <p><a href="index.html">⬅ Back to Main Page</a></p>
