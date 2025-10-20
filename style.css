@@ -128,55 +128,50 @@ header nav a:hover {
   transform: translateY(-3px);
 }
 
-/* Import a clean, professional Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+/* Import professional fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap');
 
 header {
-  background: #1e2a47; /* deep navy */
-  color: white;
+  background: #0f172a; /* elegant dark navy */
+  color: #f8fafc; /* near white */
   text-align: center;
-  padding: 40px 20px;
-  font-family: 'Poppins', sans-serif;
+  padding: 50px 20px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 header h1 {
-  font-size: 2.5em;
+  font-family: 'Merriweather', serif;
+  font-size: 3em;
   font-weight: 700;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
+  margin-bottom: 8px;
+  color: #38bdf8; /* cyan highlight */
 }
 
 header p {
   font-size: 1.1em;
   font-weight: 400;
-  color: #d1d5db; /* light gray */
-  margin-bottom: 20px;
+  color: #cbd5e1; /* softer gray */
+  margin-bottom: 25px;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* spacing between links */
+  flex-wrap: wrap;
 }
 
 header nav a {
-  color: #f3f4f6;
+  color: #f8fafc;
   text-decoration: none;
-  font-weight: 500;
-  margin: 0 10px;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-header nav a::after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 0;
-  background: #06b6d4; /* cyan accent */
-  transition: width 0.3s;
-  margin: auto;
+  font-weight: 600;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 header nav a:hover {
-  color: #06b6d4;
-}
-
-header nav a:hover::after {
-  width: 100%;
+  color: #38bdf8; /* cyan on hover */
+  transform: translateY(-2px);
 }
 
