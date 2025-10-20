@@ -48,7 +48,7 @@ price_data = load_and_preprocess('GBP-IRR.csv', is_price_data=True)
 # List of datasets to process
 names = [
     'Amirali Nakhaei', 'Amirhessam Nakhaei', 'Ahmad Nakhaei',
-    'Fatemeh Komlakh', 'Mohammadreza Nakhaee'
+    'Fatemeh Komlakh', 'Mohammadreza Nakhaei'
 ]
 
 # Process datasets
