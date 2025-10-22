@@ -59,7 +59,7 @@
       </li>
       <li>
         <strong>Independent Trader</strong> — (Jun 2019 – Now)  
-        <p>Traded in Forex, Cryptocurrencies, and Tehran Stock Market with transaction value of more than £4.1M in total .  
+        <p>Traded in Forex, Cryptocurrencies, and Tehran Stock Market with transaction value of more than <strong>£4.1M</strong> in total .  
           <a href="transactions.html" target="_blank">View Transactions Data</a>
         </p>
       </li>
@@ -116,7 +116,7 @@
       <ol>
         <li><strong>Initial feature creation pipeline:</strong>
           <ol>
-            <li>Get raw <a href="https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-data" target="_blank">Klines</a> and <a href="https://binance-docs.github.io/apidocs/spot/en/#compressed-aggregate-trades-list" target="_blank">AggTrade</a> data from Binance public repository.</li>
+            <li>Get raw Klines and AggTrade data with the help of <a href="https://binance-docs.github.io/apidocs/spot/en/#compressed-aggregate-trades-list" target="_blank">Binance public data repository</a>.</li>
             <li>Preprocess the raw data.</li>
             <li>Create more than <strong>1300 features</strong> based on multiple windows and time frames.</li>
             <li>Filter and select the most important features (via <strong>SHAP</strong>) with low cross-correlation (~400 features).</li>
@@ -136,7 +136,7 @@
     <div class="ai-block">
       <h4><i class="fa-solid fa-clock fa-beat"></i> Synchronous Cycle <span>(every 5 minutes)</span></h4>
       <ol>
-        <li>Fetch raw <a href="https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-data" target="_blank">Klines</a> and <a href="https://binance-docs.github.io/apidocs/spot/en/#compressed-aggregate-trades-list" target="_blank">AggTrade</a> data through the Binance API.</li>
+        <li>Fetch raw Klines and AggTrade data through the <a href="https://developers.binance.com/docs/binance-spot-api-docs" target="_blank">Binance API</a>.</li>
         <li>Preprocess the incoming data.</li>
         <li>Create short-term and real-time features.</li>
         <li>Predict using the trained models.
