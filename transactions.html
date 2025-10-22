@@ -9,6 +9,8 @@
   <!-- PyScript -->
   <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
   <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
   <header>
@@ -64,24 +66,17 @@
   </section>
 
 
-<script>
-  const backToTopBtn = document.getElementById("backToTop");
+  <!-- Back to Top Button -->
+  <div class="back-btn-container">
+    <button id="backToTop"><i class="fas fa-arrow-up"></i> Back to Top</button>
+  </div>
 
-  // Show button when scrolling down
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-      backToTopBtn.style.display = "block";
-    } else {
-      backToTopBtn.style.display = "none";
-    }
-  });
-
-  // Smooth scroll to top on click
-  backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-</script>
-
-<button id="backToTop">↑ Top</button>
+  <script>
+    const backToTopBtn = document.getElementById("backToTop");
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
+
