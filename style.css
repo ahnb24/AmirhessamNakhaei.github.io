@@ -175,3 +175,25 @@ footer a:hover {
   background: #0ea5e9;
   transform: scale(1.05);
 }
+
+
+.collapsible {
+  cursor: pointer;
+  color: #0ea5e9;
+  transition: color 0.3s;
+}
+
+.collapsible:hover {
+  color: #38bdf8;
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+.collapsible-content.open {
+  max-height: 1000px; /* enough to show all content */
+  padding-top: 0.5rem;
+}
