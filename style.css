@@ -199,33 +199,35 @@ footer a:hover {
 }
 
 
-/* ==== AI Trading Section (Vertical Layout) ==== */
+/* ==== AI Trading Section (Horizontal Layout) ==== */
 .ai-section {
-  margin-top: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 2rem;
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.8rem;
+  justify-items: center;
 }
 
 .ai-block {
-  background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
-  border-left: 6px solid #06b6d4;
+  background: linear-gradient(180deg, #f9fafb 0%, #f1f5f9 100%);
+  border-left: 5px solid #06b6d4;
   border-radius: 14px;
   padding: 1.4rem 1.6rem;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  animation: slideUp 0.8s ease both;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease both;
 }
 
 .ai-block:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .ai-block h4 {
   color: #0f172a;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 700;
   margin-bottom: 0.6rem;
   display: flex;
@@ -235,7 +237,7 @@ footer a:hover {
 
 .ai-block h4 i {
   color: #06b6d4;
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 .ai-block h4 span {
@@ -246,26 +248,21 @@ footer a:hover {
 .ai-block ol {
   margin-left: 1.2rem;
   color: #334155;
-}
-
-.ai-block ol li {
-  margin: 0.5rem 0;
   line-height: 1.6;
 }
 
-.ai-block ol ol {
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
+.ai-block ol li {
+  margin: 0.45rem 0;
 }
 
 .ai-block ul {
-  margin: 0.4rem 0 0.4rem 1.2rem;
+  margin: 0.4rem 0 0.4rem 1.3rem;
   list-style-type: circle;
   color: #475569;
 }
 
-/* subtle fade & slide animation */
-@keyframes slideUp {
+/* Subtle entry animation */
+@keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translateY(30px);
@@ -273,5 +270,13 @@ footer a:hover {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  .ai-section {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
 }
