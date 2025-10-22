@@ -99,14 +99,60 @@
     <h3>Self-Developed Project</h3>
     <ul>
       <li>
-        <strong>
-          <a href="https://github.com/ahnb24/AI-based-Systematic-Crypto-Trading-Pipeline-/tree/main" target="_blank">
-            AI-based Systematic Crypto-Trading Pipeline
-          </a>
-        </strong>
-        — Sep 2024 – Oct 2025 
-        <p>Developed an automated pipeline (around 20k line of python codes) for systematic crypto trading using XGBoost models.</p>
-      </li>
+  <strong>
+    <a href="https://github.com/ahnb24/AI-based-Systematic-Crypto-Trading-Pipeline-/tree/main" target="_blank">
+      AI-based Systematic Crypto-Trading Pipeline
+    </a>
+  </strong>
+  — Sep 2024 – Oct 2025
+  <p>
+    Developed an end-to-end automated pipeline (~20k lines of Python) for systematic crypto trading using advanced
+    XGBoost models, feature engineering, and API-based order execution.
+  </p>
+
+  <div class="ai-section">
+    <div class="ai-block">
+      <h4><i class="fa-solid fa-rotate fa-spin"></i> Asynchronous Cycle <span>(every 1 month)</span></h4>
+      <ol>
+        <li><strong>Initial feature creation pipeline:</strong>
+          <ol>
+            <li>Get raw <a href="https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-data" target="_blank">Klines</a> and <a href="https://binance-docs.github.io/apidocs/spot/en/#compressed-aggregate-trades-list" target="_blank">AggTrade</a> data from Binance public repository.</li>
+            <li>Preprocess the raw data.</li>
+            <li>Create more than <strong>1300 features</strong> based on multiple windows and time frames.</li>
+            <li>Filter and select the most important features (via <strong>SHAP</strong>) with low cross-correlation (~400 features).</li>
+            <li>Save the processed dataset.</li>
+          </ol>
+        </li>
+        <li><strong>Train and test the XGBoost classifier:</strong>
+          <ol>
+            <li>Optimize parameters for various <strong>TP</strong>, <strong>SL</strong>, and look-ahead windows using <strong>Weights & Biases (W&B)</strong>.</li>
+            <li>Validate the optimal parameters using the most recent year of data.</li>
+          </ol>
+        </li>
+        <li>Wait for the new month, update the data, and restart from step 2.</li>
+      </ol>
+    </div>
+
+    <div class="ai-block">
+      <h4><i class="fa-solid fa-clock fa-beat"></i> Synchronous Cycle <span>(every 5 minutes)</span></h4>
+      <ol>
+        <li>Fetch raw <a href="https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-data" target="_blank">Klines</a> and <a href="https://binance-docs.github.io/apidocs/spot/en/#compressed-aggregate-trades-list" target="_blank">AggTrade</a> data through the Binance API.</li>
+        <li>Preprocess the incoming data.</li>
+        <li>Create short-term and real-time features.</li>
+        <li>Predict using the trained models.
+          <ul>
+            <li>If prediction = <strong>0</strong>: wait for the next period, then restart.</li>
+            <li>If prediction = <strong>1</strong>: proceed to order execution.</li>
+          </ul>
+        </li>
+        <li>Execute buy/sell orders via API and confirm successful execution.</li>
+        <li>Set <strong>Take-Profit (TP)</strong> and <strong>Stop-Loss (SL)</strong> conditions and define look-ahead minutes.</li>
+        <li>Wait for the next period and repeat from step 1.</li>
+      </ol>
+    </div>
+  </div>
+</li>
+
     </ul>
 
   </section>

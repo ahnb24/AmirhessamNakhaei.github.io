@@ -197,3 +197,69 @@ footer a:hover {
   max-height: 1000px; /* enough to show all content */
   padding-top: 0.5rem;
 }
+
+
+/* ==== AI Trading Section ==== */
+.ai-section {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.ai-block {
+  background: #f8fafc;
+  border-left: 5px solid #06b6d4;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ai-block:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.ai-block h4 {
+  color: #0f172a;
+  font-size: 1.1em;
+  margin-bottom: 0.6rem;
+}
+
+.ai-block h4 i {
+  color: #06b6d4;
+  margin-right: 6px;
+}
+
+.ai-block h4 span {
+  font-weight: 500;
+  color: #475569;
+}
+
+.ai-block ol {
+  margin-left: 1.2rem;
+  color: #334155;
+}
+
+.ai-block ol li {
+  margin: 0.4rem 0;
+  line-height: 1.6;
+}
+
+.ai-block ol ol {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.ai-block ul {
+  margin: 0.4rem 0 0.4rem 1rem;
+  list-style-type: circle;
+  color: #475569;
+}
+
+@media (min-width: 800px) {
+  .ai-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
