@@ -234,15 +234,29 @@
   const toggle = document.getElementById('bachelor-toggle');
   const content = document.getElementById('bachelor-projects');
 
-  toggle.addEventListener('click', () => {
-    content.classList.toggle('open');
-    if (content.classList.contains('open')) {
-      toggle.innerHTML = 'Bachelor Degree Course Projects ▲';
+  // ensure collapsed on load
+  content.style.maxHeight = '0';
+
+  function setState(open) {
+    if (open) {
+      content.classList.add('open');
+      content.style.maxHeight = content.scrollHeight + 'px'; // key: give it a height
+      toggle.textContent = 'Bachelor Degree Course Projects ▲';
+      toggle.setAttribute('aria-expanded', 'true');
     } else {
-      toggle.innerHTML = 'Bachelor Degree Course Projects ▼';
+      content.style.maxHeight = '0';
+      content.classList.remove('open');
+      toggle.textContent = 'Bachelor Degree Course Projects ▼';
+      toggle.setAttribute('aria-expanded', 'false');
     }
+  }
+
+  toggle.addEventListener('click', () => {
+    const open = !content.classList.contains('open');
+    setState(open);
   });
 </script>
+
 
 </body>
 </html>
