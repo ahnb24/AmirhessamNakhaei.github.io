@@ -27,9 +27,10 @@
     <div class="about-container">
       <img src="images/Profile.jpg" alt="Amirhessam Nakhaei" class="profile-pic">
       <p>
-        A detail-oriented and analytical engineer with a strong passion for excelling in the financial industry. 
-        Proficient in trading, artificial intelligence, and programming, I am enthusiastic about leveraging my expertise 
-        to foster innovation in applying AI and mathematical techniques to finance.
+        I’m an analytical and detail-oriented engineer with a strong interest in the financial industry. 
+        With solid experience in trading, programming, and artificial intelligence, 
+        I’m passionate about using data-driven and mathematical approaches to solve 
+        complex problems and create innovative solutions in finance.
       </p>
     </div>
   </section>
@@ -69,7 +70,7 @@
   <section id="projects">
     <h2>Projects</h2>
 
-    <h3 id="bachelor-toggle" class="collapsible">Bachelor Degree Course Projects ▼</h3>
+    <h3 id="bachelor-toggle" class="collapsible">1- Bachelor Degree Course Projects ▼</h3>
 <div id="bachelor-projects" class="collapsible-content">
   <ul>
     <li>
@@ -101,13 +102,16 @@
       <li>
   <strong>
     <a href="https://github.com/ahnb24/AI-based-Systematic-Crypto-Trading-Pipeline-/tree/main" target="_blank">
-      AI-based Systematic Crypto-Trading Pipeline
+      2- AI-based Systematic Crypto-Trading Pipeline
     </a>
   </strong>
   — Sep 2024 – Oct 2025
   <p>
-    Developed an end-to-end automated pipeline (~20k lines of Python) for systematic crypto trading using advanced
-    XGBoost models, feature engineering, and API-based order execution.
+    Developed an automated pipeline (~20k lines of Python) for 
+    systematic crypto trading using advanced XGBoost models, 
+    feature engineering, and API-based order execution. 
+    The outcome is more than 20% overall profit per month in a robust and 
+    precise back test space. 
   </p>
 
   <div class="ai-section">
@@ -116,16 +120,16 @@
       <ol>
         <li><strong>Initial feature creation pipeline:</strong>
           <ol>
-            <li>Get raw Klines and AggTrade data with the help of <a href="https://binance-docs.github.io/apidocs/spot/en/#compressed-aggregate-trades-list" target="_blank">Binance public data repository</a>.</li>
+            <li>Get raw Klines and AggTrade data with the help of <a href="https://github.com/binance/binance-public-data/tree/master/python" target="_blank">Binance public data repository</a>.</li>
             <li>Preprocess the raw data.</li>
             <li>Create more than <strong>1300 features</strong> based on multiple windows and time frames.</li>
-            <li>Filter and select the most important features (via <strong>SHAP</strong>) with low cross-correlation (~400 features).</li>
+            <li>Filter and select the most important features via <a href="https://shap.readthedocs.io/en/latest/" target="_blank"><strong>SHAP</strong></a> with low cross-correlation (~400 features).</li>
             <li>Save the processed dataset.</li>
           </ol>
         </li>
-        <li><strong>Train and test the XGBoost classifier:</strong>
+        <li><strong>Train and test the XGBoost classifier models:</strong>
           <ol>
-            <li>Optimize parameters for various <strong>TP</strong>, <strong>SL</strong>, and look-ahead windows using <strong>Weights & Biases (W&B)</strong>.</li>
+            <li>Optimize parameters for various <strong>TP</strong>, <strong>SL</strong>, and look-ahead windows using <a href="https://wandb.ai/site" target="_blank"><strong>Weights & Biases</strong></a>.</li>
             <li>Validate the optimal parameters using the most recent year of data.</li>
           </ol>
         </li>
@@ -138,10 +142,10 @@
       <ol>
         <li>Fetch raw Klines and AggTrade data through the <a href="https://developers.binance.com/docs/binance-spot-api-docs" target="_blank">Binance API</a>.</li>
         <li>Preprocess the incoming data.</li>
-        <li>Create short-term and real-time features.</li>
+        <li>Create features.</li>
         <li>Predict using the trained models.
           <ul>
-            <li>If prediction = <strong>0</strong>: wait for the next period, then restart.</li>
+            <li>If prediction = <strong>0</strong>: wait for the next period,  then repeat from step 1.</li>
             <li>If prediction = <strong>1</strong>: proceed to order execution.</li>
           </ul>
         </li>
